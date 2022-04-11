@@ -6,7 +6,7 @@
 4. Update farm will update `acc_token_per_share` and `last_reward_block`
 5. Update farm by:
     - Get `lp_supply` = balance_of (Farm lp token address)
-    - `acc_token_per_share` = (`block now` - `last_reward_block`) * `reward_per_block`
+    - `acc_token_per_share` = (`block now` - `last_reward_block`) * `reward_per_block` / `lp_supply`
     - `last_reward_block` is block where Farm was update
 6. Farmer can `deposit` lp token, when Farmer call `deposit`, flow is:
     - Update Farm with rule was defined at step 5
